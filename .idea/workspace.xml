@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d476f8bd-2649-45a7-a1a9-36c632192f90" name="Changes" comment="First assessment into Git">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PageObjects/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PageObjects/ContactPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseComponents/BaseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseComponents/BaseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Test2.java" afterDir="false" />
-    </list>
+    <list default="true" id="d476f8bd-2649-45a7-a1a9-36c632192f90" name="Changes" comment="First assessment into Git" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
