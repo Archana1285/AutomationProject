@@ -9,7 +9,7 @@ import java.io.IOException;
 
 import static java.lang.Thread.sleep;
 
-@Test(invocationCount = 2)
+@Test(invocationCount = 5)
 public class Test2 extends BaseCode {
 
     public void testCase2() throws InterruptedException, IOException {
@@ -17,8 +17,8 @@ public class Test2 extends BaseCode {
         HomePage homepage = launchApplication();
         //from Home go to Contact page
         ContactPage contactpage = homepage.gotoContact();
-        //fill in all required field
-        contactpage.fillform("Tester1", "Test", "test@gmail.com", "42224242", "test123");
+        //fill in all required field with random values
+        contactpage.fillform(contactpage.genRandomName(10), contactpage.genRandomName(10), contactpage.genRandomName(10) + "@gmail.com", contactpage.genRandomPhone(), contactpage.genRandomName(12)+contactpage.genRandomPhone());
         contactpage.submit();
     }
 }

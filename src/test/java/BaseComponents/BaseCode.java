@@ -47,7 +47,7 @@ public class BaseCode {
 
     @AfterTest(alwaysRun = true)
     public void closeBrowser() {
-        driver.close();
+        driver.quit();
     }
 
 }

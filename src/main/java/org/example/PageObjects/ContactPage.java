@@ -1,11 +1,16 @@
 package org.example.PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
+import java.util.Locale;
 
 public class ContactPage extends BasePage {
     WebDriver driver;
@@ -56,14 +61,21 @@ public class ContactPage extends BasePage {
     public void mandatoryCheck() {
 
         for (WebElement field : mandatoryFields) {
-            if (field.getAttribute("value").isEmpty()) {
-                System.out.println("Error: " + field.getAttribute("name") + " is a mandatory field and cannot be empty.");
-
-            } else {
+            String id = field.getAttribute("name") + "-err";
+                 if (field.getAttribute("value").isEmpty()) {
+                        String errMsg = driver.findElement(By.id(id)).getText();
+                        System.out.println("Error: " + field.getAttribute("name") + " is a mandatory field and cannot be empty.");
+                        Assert.assertTrue(errMsg.equalsIgnoreCase(field.getAttribute("name") + " is required"));
+                    }
+                  else
+                    {
                 System.out.println(field.getAttribute("name") + " is filled correctly");
+                Assert.assertFalse(field.getAttribute("value").isEmpty());
+
+            }
             }
         }
-    }
+
 
     public void fillform(String foreName1, String surName1, String email, String phoneNumber, String msg) {
         foreName.clear();

@@ -21,7 +21,7 @@ public class Test1 extends BaseCode {
         HomePage homepage = launchApplication();
         //from Home go to Contact page
         ContactPage contactpage = homepage.gotoContact();
-        contactpage.fillform("", "", "", "42224242", "");
+        contactpage.fillform("Arch", "", "test@gmail.com", "42224242", "");
         //Submit contact page without any values
         contactpage.submit();
         //fill in all required field

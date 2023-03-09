@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class BasePage {
     WebDriver driver;
@@ -33,7 +34,7 @@ public BasePage(WebDriver driver)
 
     public void waitForElementVisibility(WebElement locator)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(locator));
     }
 
@@ -66,5 +67,23 @@ public BasePage(WebDriver driver)
         ShoppingPage shoppingpage = new ShoppingPage(driver);
         return shoppingpage;
 
+    }
+
+    public String genRandomName(int length)
+    {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int randomIndex = new Random().nextInt(characters.length());
+            sb.append(characters.charAt(randomIndex));
+        }
+        return sb.toString();
+    }
+    public String genRandomPhone()
+    {
+        Random rand = new Random();
+        int n = rand.nextInt((int)Math.pow(10, 10));
+        String number = String.format("%010d", n);
+        return number;
     }
 }
