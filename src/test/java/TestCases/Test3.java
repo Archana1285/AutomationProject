@@ -16,7 +16,7 @@ Verify the price for each product
 Verify that total = sum(sub totals)
  */
 @Test
-public class Test3 extends BaseCode {
+public class Test3 extends BaseCode{
 
     public void testCase3() throws IOException, InterruptedException {
 
