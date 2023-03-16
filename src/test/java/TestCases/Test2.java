@@ -8,6 +8,17 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static java.lang.Thread.sleep;
+/*
+Test case 2:
+1. From the home page go to contact page
+2. Populate mandatory fields
+3. Click submit button
+
+4. Validate successful submission message
+Note: Run this test 5 times to ensure 100% pass rate
+
+Can use Faker library to generate test data
+ */
 
 @Test(invocationCount = 5)
 public class Test2 extends BaseCode {

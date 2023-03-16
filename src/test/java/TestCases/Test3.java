@@ -7,7 +7,14 @@ import org.example.PageObjects.ShoppingPage;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-
+/*
+Test case 3:
+Buy 2Stuffed Frog,5Fluffy Bunny, 3Valentine Bear
+Go to the cart page
+Verify the subtotal for each product is correct
+Verify the price for each product
+Verify that total = sum(sub totals)
+ */
 @Test
 public class Test3 extends BaseCode {
 

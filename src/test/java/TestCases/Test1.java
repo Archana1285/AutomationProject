@@ -13,6 +13,13 @@ import java.time.Duration;
 
 import static java.lang.Thread.sleep;
 
+/*Test case 1:
+        From the home page go to contact page
+        Click submit button
+        Verify error messages
+        Populate mandatory fields
+        Validate errors are gone*/
+
 @Test
 public class Test1 extends BaseCode {
 
