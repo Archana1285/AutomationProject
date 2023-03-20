@@ -25,7 +25,7 @@ public class TestCase1 extends BaseFile {
     @Test(dataProvider = "stockNames", dataProviderClass = DProvider.class)
     public void testCase2(String shareName, String searchName) throws InterruptedException, IOException {
 
-        graphPage = searchPage.searchGraph();
+        graphPage = searchPage.searchGraph(shareName,searchName);
         graphPage.takeScreenShot();
 
 

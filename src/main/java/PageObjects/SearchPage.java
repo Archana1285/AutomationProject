@@ -33,13 +33,15 @@ public class SearchPage extends LoginPage {
 
 
 
-    public GraphPage searchGraph( )
+    public GraphPage searchGraph(String shareName, String searchName )
     {
         //waitForElementVisibility(search);
         search.click();
         search1.click();
-        search1.sendKeys("BANKNIFTY");
-        bankNiftyGraph.click();
+        //search1.sendKeys("BANKNIFTY");
+        search1.sendKeys(shareName);
+        //bankNiftyGraph.click();
+
         //GraphPage graphPage = new GraphPage(driver);
         return new GraphPage(driver);
 
